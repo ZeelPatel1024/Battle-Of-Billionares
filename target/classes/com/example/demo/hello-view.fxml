@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="892.0" prefWidth="1589.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <TabPane layoutY="6.0" prefHeight="882.0" prefWidth="1572.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Choose Characters">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="538.0" prefWidth="746.0">
+                     <children>
+                        <Button fx:id="btnStart" layoutX="510.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleStart" prefHeight="59.0" prefWidth="199.0" text="Start Game!" textFill="#b59a00">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="24.0" />
+                           </font></Button>
+                        <Label fx:id="label1" layoutX="33.0" layoutY="14.0" text="Choose your billionare">
+                           <font>
+                              <Font name="Bookman Old Style" size="29.0" />
+                           </font></Label>
+                        <ImageView fx:id="imgPic" fitHeight="118.0" fitWidth="118.0" layoutX="46.0" layoutY="115.0" onMouseClicked="#clickOnJeff" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Jeffery%20Bezoz.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgPic2" fitHeight="145.0" fitWidth="182.0" layoutX="222.0" layoutY="111.0" onMouseClicked="#clickOnMark" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Mark%20Zukerberg.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgPic3" fitHeight="109.0" fitWidth="196.0" layoutX="12.0" layoutY="319.0" onMouseClicked="#clickOnWarren" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Warren%20Buffet.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgPic4" fitHeight="128.0" fitWidth="125.0" layoutX="279.0" layoutY="319.0" onMouseClicked="#clickOnBill" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Bill%20Gates.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgPic5" fitHeight="118.0" fitWidth="160.0" layoutX="16.0" layoutY="531.0" onMouseClicked="#clickOnAmbani" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Mukesh%20Ambani.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgPic6" fitHeight="119.0" fitWidth="171.0" layoutX="211.0" layoutY="527.0" onMouseClicked="#clickOnElon" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Elon%20Musk.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="56.0" layoutY="81.0" mnemonicParsing="false" onAction="#butClickOnChoseJeff" text="Jeffery Bezos" textFill="#001dab">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Button>
+                        <Button layoutX="253.0" layoutY="79.0" mnemonicParsing="false" onAction="#butClickOnChoseMark" text="Mark Zukerberg" textFill="#210aa1">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Button>
+                        <Button layoutX="55.0" layoutY="281.0" mnemonicParsing="false" onAction="#butClickChoseWarren" text="Warren Buffet" textFill="#4a0686">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Button>
+                        <Button layoutX="302.0" layoutY="281.0" mnemonicParsing="false" onAction="#butClickChoseBill" text="Bill Gates" textFill="#880594">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Button>
+                        <Button layoutX="34.0" layoutY="492.0" mnemonicParsing="false" onAction="#butClickChoseMukesh" text="Mukesh Ambani" textFill="#650258">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Button>
+                        <Button layoutX="253.0" layoutY="492.0" mnemonicParsing="false" onAction="#butClickChoseElon" text="Elon Musk" textFill="#6e043d">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Button>
+                        <ListView fx:id="lstCharacterStats" layoutX="474.0" layoutY="59.0" prefHeight="212.0" prefWidth="271.0" />
+                        <Label fx:id="lblHeroStats" layoutX="541.0" layoutY="32.0" text="Character Description">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font></Label>
+                        <ImageView fitHeight="183.0" fitWidth="85.0" layoutX="881.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Bezos%20Bears.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1026.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Zukerburg%20Zombies.jpg" />
+                           </image>
+                        </ImageView>
+                        <Line endX="-160.0" endY="298.5" layoutX="973.0" layoutY="392.0" startX="-160.0" startY="-372.0" strokeWidth="5.0" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="854.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Buffet%20Beasts.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1024.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Gate%20Goblins.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="851.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Ambani%20Aliens.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1026.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Musk%20Minions.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="895.0" layoutY="65.0" text="Bezos Bears" />
+                        <Label layoutX="1026.0" layoutY="65.0" text="Zukerburg Zombies" />
+                        <Label layoutX="897.0" layoutY="261.0" text="Buffet Beasts" />
+                        <Label layoutX="1044.0" layoutY="261.0" text="Gate Goblins" />
+                        <Label layoutX="885.0" layoutY="443.0" text="Ambani Aliens" />
+                        <Label layoutX="1040.0" layoutY="443.0" text="Musk Minions" />
+                        <ListView fx:id="lstArmyDescription" layoutX="472.0" layoutY="408.0" prefHeight="248.0" prefWidth="276.0" />
+                        <Line endX="-160.0" endY="274.5" layoutX="577.0" layoutY="416.0" startX="-160.0" startY="-394.0" strokeWidth="5.0" />
+                        <Label fx:id="lblHeroStats1" layoutX="551.0" layoutY="381.0" text="Army Description">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-160.0" endY="298.5" layoutX="1329.0" layoutY="392.0" startX="-160.0" startY="-376.0" strokeWidth="5.0" />
+                        <Line endX="701.0" endY="229.0" layoutX="852.0" layoutY="464.0" startX="-849.0" startY="229.0" strokeWidth="5.0" />
+                        <Line endX="-160.0" endY="277.5" layoutX="352.0" layoutY="413.0" startX="-160.0" startY="54.0" strokeWidth="2.0" />
+                        <Line endX="52.5" endY="43.0" layoutX="362.0" layoutY="423.0" startX="-362.0" startY="43.0" strokeWidth="2.0" />
+                        <Line endX="52.5" endY="43.0" layoutX="366.0" layoutY="211.0" startX="-362.0" startY="43.0" strokeWidth="2.0" />
+                        <Line endX="-160.0" endY="276.0" layoutX="401.0" layoutY="189.0" startX="-160.0" startY="66.0" strokeWidth="2.0" />
+                        <Line endX="52.5" endY="43.0" layoutX="366.0" layoutY="16.0" startX="-362.0" startY="43.0" strokeWidth="2.0" />
+                        <Line endX="-160.0" endY="274.0" layoutX="353.0" layoutY="-21.0" startX="-160.0" startY="80.0" strokeWidth="2.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabCC" disable="true" text="Customise Character">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="202.0" layoutY="111.0" text="Your character" />
+                        <ImageView fx:id="imgMyHeroCC" fitHeight="150.0" fitWidth="200.0" layoutX="166.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+                        <ListView fx:id="lstShowDefaultStatsCC" layoutX="365.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="431.0" layoutY="111.0" text="Defualt Stats" />
+                        <ListView fx:id="lstShowUpdatedStatsCC" layoutX="606.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="669.0" layoutY="111.0" text="Updated Stats" />
+                        <Button layoutX="524.0" layoutY="337.0" mnemonicParsing="false" onAction="#butResetUpdatedCharacters" text="Reset Updated Stats" />
+                        <Label layoutX="246.0" layoutY="383.0" text="Change Name: " />
+                        <TextField fx:id="txtChangeName" layoutX="350.0" layoutY="379.0" />
+                        <Label layoutX="557.0" layoutY="377.0" prefHeight="17.0" prefWidth="130.0" text="Change Health Points: " />
+                        <TextField fx:id="txtChangeHealthPoints" layoutX="696.0" layoutY="373.0" />
+                        <Label layoutX="542.0" layoutY="421.0" text="Number Of Troops In Army: " />
+                        <TextField fx:id="txtChangeNumTroopsInArmy" layoutX="701.0" layoutY="417.0" />
+                        <Label layoutX="259.0" layoutY="431.0" text="Army Name: " />
+                        <TextField fx:id="txtChangeArmyName" layoutX="350.0" layoutY="427.0" />
+                        <Label layoutX="221.0" layoutY="469.0" text="Change Army Health: " />
+                        <TextField fx:id="txtChangeArmyHealth" layoutX="350.0" layoutY="465.0" />
+                        <Label layoutX="629.0" layoutY="469.0" text="Army Morale: " />
+                        <TextField fx:id="txtChangeArmyMorale" layoutX="706.0" layoutY="465.0" />
+                        <ImageView fx:id="imgMyArmyCC" fitHeight="263.0" fitWidth="210.0" layoutX="887.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="924.0" layoutY="89.0" text="Your Army" />
+                        <Label layoutX="416.0" layoutY="36.0" text="Update Your Character!">
+                           <font>
+                              <Font name="Broadway" size="31.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="butApplyChanges" layoutX="514.0" layoutY="582.0" mnemonicParsing="false" onAction="#butApplyCharacterStatChangesCC" text="Apply Changes">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="569.0" layoutY="513.0" text="NOTE!" />
+                        <Label layoutX="283.0" layoutY="544.0" text="You are able to change this character stats no more then 3 times. After your third try your stats will stay this way" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Battle Tab">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1568.0">
+                     <children>
+                        <ImageView fx:id="imgHero" fitHeight="152.0" fitWidth="231.0" layoutX="46.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgVillen" fitHeight="150.0" fitWidth="200.0" layoutX="423.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="111.0" layoutY="27.0" text="Hero">
+                           <font>
+                              <Font name="Bodoni MT Black" size="33.0" />
+                           </font></Label>
+                        <Label layoutX="473.0" layoutY="27.0" text="Villen">
+                           <font>
+                              <Font name="Bodoni MT Black" size="33.0" />
+                           </font></Label>
+                        <Label layoutX="321.0" layoutY="134.0" text="VS">
+                           <font>
+                              <Font name="Cooper Black" size="34.0" />
+                           </font></Label>
+                        <Label layoutX="289.0" layoutY="207.0" text="Level:">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="24.0" />
+                           </font></Label>
+                        <Label fx:id="lblShowLevel" layoutX="351.0" layoutY="207.0" text="_____">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <ListView fx:id="lstNewHeroStats" layoutX="486.0" layoutY="303.0" prefHeight="164.0" prefWidth="152.0" />
+                        <ListView fx:id="lstNewEnemyStats" layoutX="686.0" layoutY="302.0" prefHeight="166.0" prefWidth="162.0" />
+                        <Label layoutX="524.0" layoutY="269.0" text="Hero Stats">
+                           <font>
+                              <Font name="Baskerville Old Face" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="727.0" layoutY="269.0" text="Villen Stats">
+                           <font>
+                              <Font name="Baskerville Old Face" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="29.0" layoutY="528.0" text="Action Enemy: ">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblActionDisplay" layoutX="149.0" layoutY="528.0" text="_____">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="lblButEnemyTaunt" disable="true" layoutX="645.0" layoutY="70.0" mnemonicParsing="false" onAction="#butUseEnemyTaunt" text="Enemy Taunt">
+                           <font>
+                              <Font name="Bodoni MT" size="14.0" />
+                           </font></Button>
+                        <Label layoutX="669.0" layoutY="14.0" text="Abilities:">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="36.0" />
+                           </font></Label>
+                        <Label layoutX="33.0" layoutY="480.0" text="Action Heros: ">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblHeroAction" layoutX="153.0" layoutY="480.0" text="____">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="30.0" layoutY="610.0" text="Result: ">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblResultOfEqu" layoutX="109.0" layoutY="610.0" text="____">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="butIDMoneySteal" disable="true" layoutX="753.0" layoutY="70.0" mnemonicParsing="false" onAction="#butUseMoneySteal" text="Money Steal">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="butIDComboEffect" disable="true" layoutX="642.0" layoutY="122.0" mnemonicParsing="false" onAction="#butUseComboEffect" text="Combo Effect">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="butSPOne" disable="true" layoutX="655.0" layoutY="162.0" mnemonicParsing="false" onAction="#butSpeicalAbilityOne" prefHeight="31.0" prefWidth="124.0" text="Special Ability 1">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="butSATwo" disable="true" layoutX="655.0" layoutY="192.0" mnemonicParsing="false" onAction="#butSpecialAbilityTwo" prefHeight="30.0" prefWidth="126.0" text="Special Abiliity 2">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
+                        <Button fx:id="butSAThree" disable="true" layoutX="655.0" layoutY="222.0" mnemonicParsing="false" onAction="#butSpeicalAbilityThree" text="Special Ability 3">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="butIDStartBattle" layoutX="196.0" layoutY="302.0" mnemonicParsing="false" onAction="#butSimuStartBattle" text="Start Battle!" />
+                        <Button fx:id="butIDBlockAttack" disable="true" layoutX="753.0" layoutY="122.0" mnemonicParsing="false" onAction="#butUseBlockAttack" text="Block Attack">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="butIDMoveOn" disable="true" layoutX="165.0" layoutY="344.0" mnemonicParsing="false" onAction="#butMoveOnToNextLevel" text="Move On To Next Level" />
+                        <Button layoutX="168.0" layoutY="424.0" mnemonicParsing="false" onAction="#butCheatLVL1" text="Cheat Through Levels" />
+                        <Button fx:id="butIDReplayLVL" disable="true" layoutX="182.0" layoutY="385.0" mnemonicParsing="false" onAction="#butClickReplayLevel" text="Replay This Level" />
+                        <ImageView fx:id="imgHeroArmy" fitHeight="150.0" fitWidth="136.0" layoutX="18.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgVillenArmy" fitHeight="150.0" fitWidth="141.0" layoutX="316.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="48.0" layoutY="259.0" text="Hero Army">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="342.0" layoutY="259.0" text="Villen Army">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgShowAttackHero" fitHeight="119.0" fitWidth="139.0" layoutX="493.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgShowAttackVillen" fitHeight="112.0" fitWidth="127.0" layoutX="704.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="918.0" layoutY="24.0" text="Winner!">
+                           <font>
+                              <Font name="Bodoni MT" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgShowWinner" fitHeight="201.0" fitWidth="131.0" layoutX="874.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/questionMark.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1150.0" layoutY="24.0" text="Loser:">
+                           <font>
+                              <Font name="Bodoni MT" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgShowLoser" fitHeight="202.0" fitWidth="204.0" layoutX="1075.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/questionMark.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="966.0" layoutY="283.0" text="Level In Villa">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="245.0" fitWidth="167.0" layoutX="1003.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/IMG_2908.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgArrow" fitHeight="76.0" fitWidth="97.0" layoutX="926.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/arrow.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="486.0" layoutY="472.0" text="Keys Found: " />
+                        <Label fx:id="lblNumKeysFound" layoutX="560.0" layoutY="472.0" text="_____" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabShop" disable="true" text="Mystical Magic Shop">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="64.0" layoutY="29.0" text="Number of Points Attained =">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="24.0" />
+                           </font></Label>
+                        <Label fx:id="lblBonusPoints" layoutX="441.0" layoutY="29.0" text="____">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="24.0" />
+                           </font></Label>
+                        <Button fx:id="butIDHealthPotion" layoutX="153.0" layoutY="290.0" mnemonicParsing="false" onAction="#butBuyHealthPotion" text="Buy for 20 points">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font></Button>
+                        <Label layoutX="21.0" layoutY="293.0" text="Health Potion: ">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="348.0" layoutY="293.0" text="Army Health Potion:">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="butIDButArmHealPot" layoutX="520.0" layoutY="291.0" mnemonicParsing="false" onAction="#butButArmyHealthPotion" text="Buy for 20 points">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font></Button>
+                        <Label layoutX="349.0" layoutY="558.0" text="Motivational Speech: ">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="butIDBuyMotivSpeech" layoutX="527.0" layoutY="555.0" mnemonicParsing="false" onAction="#butBuyMotivationalSpeech" text="Buy for 50 points">
+                           <font>
+                              <Font name="Arial Narrow Bold Italic" size="15.0" />
+                           </font></Button>
+                        <Label layoutX="36.0" layoutY="549.0" text="Train Army: ">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="butIDBuyTrainArmy" layoutX="149.0" layoutY="546.0" mnemonicParsing="false" onAction="#butBuyTrainArmy" text="Buy for 50 points">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font></Button>
+                        <Label layoutX="20.0" layoutY="260.0" text="(Increases the heros health by 100 points)">
+                           <font>
+                              <Font name="Bodoni MT Bold Italic" size="16.0" />
+                           </font></Label>
+                        <Label layoutX="349.0" layoutY="260.0" text="(Increases Armys Health by 50 points)">
+                           <font>
+                              <Font name="Bodoni MT Bold Italic" size="16.0" />
+                           </font></Label>
+                        <Label layoutX="395.0" layoutY="519.0" text="(Increases Army Morale)">
+                           <font>
+                              <Font name="Bodoni MT Bold Italic" size="16.0" />
+                           </font></Label>
+                        <Label layoutX="30.0" layoutY="519.0" text="(Increases Armys Battle Damage)">
+                           <font>
+                              <Font name="Bodoni MT Bold Italic" size="16.0" />
+                           </font></Label>
+                        <Label layoutX="40.0" layoutY="606.0" text="Reminder:">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="14.0" />
+                           </font></Label>
+                        <Label fx:id="idShowForShop" layoutX="107.0" layoutY="606.0" text="_____">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="14.0" />
+                           </font></Label>
+                        <Button fx:id="butCCAA" layoutX="759.0" layoutY="305.0" mnemonicParsing="false" onAction="#butCostomCodeAttackAbi" text="Costomise Code Attack Ability" />
+                        <ImageView fitHeight="180.0" fitWidth="230.0" layoutX="57.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Army%20Potion.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="162.0" fitWidth="215.0" layoutX="382.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/Speech.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="171.0" fitWidth="177.0" layoutX="64.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/exercise.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/healPotion.gif" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtCosCodeAttack" layoutX="772.0" layoutY="343.0" />
+                        <ListView fx:id="lstSpecialAbility" layoutX="747.0" layoutY="87.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="742.0" layoutY="35.0" text="Special Abilities: ">
+                           <font>
+                              <Font name="Bernard MT Condensed" size="32.0" />
+                           </font></Label>
+                        <Label layoutX="660.0" layoutY="381.0" text="A random number between inputed num and 0 will be generated">
+                           <font>
+                              <Font name="Bell MT" size="16.0" />
+                           </font></Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Story / How To Play">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="165.0" layoutY="25.0" text="Storyline:">
+                           <font>
+                              <Font name="Book Antiqua" size="42.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStoryLine" layoutX="23.0" layoutY="94.0" text="________">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-100.0" endY="548.0" layoutX="576.0" layoutY="27.0" startX="-100.0" strokeWidth="4.0" />
+                        <Label layoutX="607.0" layoutY="34.0" text="How To Play: ">
+                           <font>
+                              <Font name="Book Antiqua" size="42.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="513.0" layoutY="104.0" text="You can go to the costomise character bar to costomise your character">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="513.0" layoutY="132.0" text="if you want to change the stats of your chosen billionare and army. Then you go to " />
+                        <Label layoutX="513.0" layoutY="158.0" text="the battle tab and start at level one. Use the given abilities to defeat the villein!!" />
+                        <Label layoutX="513.0" layoutY="182.0" text="Even though some of the attacks may seem randomsied, there is a pattern to it.  " />
+                        <Label layoutX="513.0" layoutY="208.0" text="Replay levels one to get experience points, but if you lose once you lose the whole game!" />
+                        <Label layoutX="513.0" layoutY="233.0" text="Battle your way to the top and defeat the big boss in level 3 three times to " />
+                        <Label layoutX="513.0" layoutY="259.0" text="find the antidote! You are able to use the shop and buy things that seem most relevent to you." />
+                        <Label layoutX="573.0" layoutY="284.0" text="HAVE FUN, THE FATE OF MEGAMARD IS IN YOUR HANDS!! " />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabEnd" disable="true" text="The End">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="354.0" layoutY="36.0" text="Final Floor">
+                           <font>
+                              <Font name="Candara Light" size="56.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDoorChoose" layoutX="285.0" layoutY="103.0" text="______" />
+                        <ImageView fx:id="imgNoMoney" fitHeight="335.0" fitWidth="221.0" layoutX="124.0" layoutY="168.0" onMouseClicked="#onClickNoMoneyDoor" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/noMoneyDoor.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgSomeMoney" fitHeight="353.0" fitWidth="206.0" layoutX="380.0" layoutY="159.0" onMouseClicked="#onClickedOnSomeMoneyDoor" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/someMoneyDoor.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgLotsOfMoney" fitHeight="365.0" fitWidth="253.0" layoutX="616.0" layoutY="151.0" onMouseClicked="#onClickedOnLotsOfMoneyDoor" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/lotsOfMoneyDoor.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="32.0" layoutY="62.0" text="Keys: ">
+                           <font>
+                              <Font name="Bodoni MT" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="68.0" fitWidth="122.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pics/key.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblResultOfClickingOnDoors" layoutX="165.0" layoutY="582.0" text="_______" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
